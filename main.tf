@@ -23,3 +23,10 @@ resource "ibm_is_vpc_routing_table_route" "to_account2_via_firewall" {
   destination   = "172.20.1.0/24"
   next_hop      = var.firewall_ip
 }
+
+# PowerVS Workspace na Account 1
+resource "ibm_pi_workspace" "account1_powervs" {
+  pi_cloud_instance_id = var.powervs_cloud_instance_id
+  pi_workspace_name    = "account1-powervs-ws"
+  region               = var.powervs_region
+}
