@@ -1,7 +1,3 @@
-provider "ibm" {
-  ibmcloud_api_key = var.ibmcloud_api_key
-}
-
 resource "ibm_is_vpc" "account1_vpc" {
   name = "account1-vpc"
 }
