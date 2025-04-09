@@ -31,9 +31,11 @@ module "powervs_workspace" {
   source  = "terraform-ibm-modules/powervs-workspace/ibm"
   version = "1.1.1" # ou latest estável
 
-  pi_name               = var.powervs_name
-  pi_resource_group_id  = var.powervs_resource_group_id
-  pi_datacenter         = var.powervs_datacenter
+pi_workspace_name      = var.powervs_workspace_name
+pi_resource_group_name = var.powervs_resource_group_name
+pi_zone                = var.powervs_zone
+pi_ssh_public_key      = var.powervs_ssh_public_key
+
 
   # Opcional: redes e VLAN
   pi_networks = [

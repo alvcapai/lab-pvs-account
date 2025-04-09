@@ -19,17 +19,22 @@ variable "powervs_region" {
   type        = string
 }
 
-variable "powervs_name" {
-  description = "Name of the PowerVS Cloud Instance"
+variable "powervs_workspace_name" {
+  description = "Name of the PowerVS workspace"
   type        = string
 }
 
-variable "powervs_resource_group_id" {
-  description = "Resource group ID for PowerVS"
+variable "powervs_resource_group_name" {
+  description = "Name of the Resource Group"
   type        = string
 }
 
-variable "powervs_datacenter" {
-  description = "PowerVS datacenter, e.g., sao01, dal10"
+variable "powervs_zone" {
+  description = "Zone for PowerVS workspace (e.g., sao01)"
+  type        = string
+}
+
+variable "powervs_ssh_public_key" {
+  description = "SSH public key for PowerVS access"
   type        = string
 }
