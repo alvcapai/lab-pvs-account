@@ -36,13 +36,4 @@ pi_resource_group_name = var.powervs_resource_group_name
 pi_zone                = var.powervs_zone
 pi_ssh_public_key      = var.powervs_ssh_public_key
 
-
-  # Opcional: redes e VLAN
-  pi_networks = [
-    {
-      name       = "powervs-network"
-      type       = "vlan"
-      cidr_block = "192.168.100.0/24"
-    }
-  ]
 }
