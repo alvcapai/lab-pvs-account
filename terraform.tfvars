@@ -9,4 +9,7 @@ powervs_ssh_public_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDG1xrrLipGM
 powervs_workspace_name      = "account1-workspace"             # Defina o nome que quiser
 powervs_resource_group_name = "RG-alvaro"                        # Ou o nome real do seu resource group
 powervs_zone                = "sao01"                          # Confirmar a zona correta
+vpc_zone                    = "br-sao-1" # ou a zona correta da sua VPC
+account2_cidr               = "172.20.1.0/24" # ou o CIDR da VPC da segunda conta
+
 
