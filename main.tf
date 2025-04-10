@@ -23,7 +23,7 @@ module "powervs_workspace" {
   pi_zone                = var.powervs_zone
 
   pi_ssh_public_key = var.powervs_ssh_public_key
-  pi_images = length(keys(var.powervs_images)) > 0 ? var.powervs_images : {}
+  #pi_images = length(keys(var.powervs_images)) > 0 ? var.powervs_images : {}
   pi_image_names = []
 }
 
