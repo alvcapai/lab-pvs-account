@@ -23,14 +23,19 @@ module "powervs_workspace" {
   pi_zone                = var.powervs_zone
 
   pi_ssh_public_key = var.powervs_ssh_public_key
-
+  pi_images = length(keys(var.powervs_images)) > 0 ? var.powervs_images : {}
   pi_image_names = []
 }
 
 resource "ibm_is_vpc_routing_table_route" "to_account2_via_firewall" {
-  vpc         = ibm_is_vpc.account1_vpc.id
+  vpc         = data.ibm_is_vpc.account1_vpc.id #ibm_is_vpc.account1_vpc.id
   zone        = var.vpc_zone
   destination = var.account2_cidr
   action      = "deliver"
   next_hop    = var.firewall_ip
+}
+
+resource "ibm_is_vpc" "account1_vpc" {
+  name = "account1-vpc"
+  resource_group = var.powervs_resource_group_id
 }

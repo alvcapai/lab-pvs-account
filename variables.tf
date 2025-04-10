@@ -50,3 +50,17 @@ variable "powervs_region" {
   description = "Região do PowerVS"
   type        = string
 }
+
+variable "powervs_images" {
+  description = "Lista de imagens a serem importadas para PowerVS"
+  type        = map(object({
+    pi_image_bucket_name = string
+    pi_image_name        = string
+  }))
+  default     = {}
+}
+
+variable "powervs_resource_group_id" {
+  description = "ID do resource group do PowerVS"
+  type        = string
+}
