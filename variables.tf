@@ -64,3 +64,9 @@ variable "powervs_resource_group_id" {
   description = "ID do resource group do PowerVS"
   type        = string
 }
+
+variable "account1_vpc_name" {
+  description = "Nome do VPC da Account 1"
+  type        = string
+}
+

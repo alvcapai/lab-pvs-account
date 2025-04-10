@@ -16,6 +16,7 @@ powervs_zone                = "sao01"                          # Confirmar a zon
 vpc_zone                    = "br-sao-1" # ou a zona correta da sua VPC
 account2_cidr               = "172.20.1.0/24" # ou o CIDR da VPC da segunda conta
 powervs_images = {}
+account1_vpc_name = "nome-do-seu-vpc"
 
 
 
