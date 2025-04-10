@@ -27,7 +27,7 @@ module "powervs_workspace" {
   pi_image_names = []
 }
 
-resource "ibm_is_vpc_route" "to_account2_via_firewall" {
+resource "ibm_is_vpc_routing_table_route" "to_account2_via_firewall" {
   vpc         = ibm_is_vpc.account1_vpc.id
   zone        = var.vpc_zone
   destination = var.account2_cidr

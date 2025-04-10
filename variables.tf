@@ -40,3 +40,13 @@ variable "account2_cidr" {
   description = "CIDR block of account 2 VPC"
   type        = string
 }
+
+variable "powervs_cloud_instance_id" {
+  description = "ID da Cloud Instance do PowerVS"
+  type        = string
+}
+
+variable "powervs_region" {
+  description = "Região do PowerVS"
+  type        = string
+}
