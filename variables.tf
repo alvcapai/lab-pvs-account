@@ -1,40 +1,42 @@
 variable "ibmcloud_api_key" {
-  description = "IBM Cloud API key"
-  type        = string
-  sensitive   = true
-}
-
-variable "firewall_ip" {
-  description = "Firewall IP in network account"
-  type        = string
-}
-
-variable "powervs_cloud_instance_id" {
-  description = "PowerVS Cloud Instance ID"
-  type        = string
-}
-
-variable "powervs_region" {
-  description = "PowerVS region"
+  description = "IBM Cloud API Key"
   type        = string
 }
 
 variable "powervs_workspace_name" {
-  description = "Name of the PowerVS workspace"
+  description = "PowerVS workspace name"
   type        = string
 }
 
 variable "powervs_resource_group_name" {
-  description = "Name of the Resource Group"
+  description = "IBM Cloud Resource Group name"
   type        = string
 }
 
 variable "powervs_zone" {
-  description = "Zone for PowerVS workspace (e.g., sao01)"
+  description = "PowerVS zone (e.g. sao01)"
   type        = string
 }
 
 variable "powervs_ssh_public_key" {
-  description = "SSH public key for PowerVS access"
+  description = "SSH public key object for PowerVS"
+  type = object({
+    key_name   = string
+    public_key = string
+  })
+}
+
+variable "firewall_ip" {
+  description = "Firewall IP address for routing"
+  type        = string
+}
+
+variable "vpc_zone" {
+  description = "Zone for the VPC route"
+  type        = string
+}
+
+variable "account2_cidr" {
+  description = "CIDR block of account 2 VPC"
   type        = string
 }
